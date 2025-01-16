@@ -1,69 +1,142 @@
-# Module 04 Mini-Project: Mood Board
+# 05 Project 1: Interactive Front-End Application
 
-In this activity, you will work with a group to build a dynamic mood board.
+At the conclusion of each phase of this course, you’ll work with a group of your fellow students to create a **project**. A project is collaborative work among a group of developers to create an application that solves a real-world problem. Projects model the experience you’ll encounter in every development role at any company, from large multinational businesses to small startups. Coding is collaborative.
 
-## Instructions
+A project is a bit different from the Challenge assignments you’ve worked on so far. One of the biggest differences is that you’ll no longer build an application by yourself! This has some advantages&mdash;you won’t have to do all of the work, you can divide up duties, and you can share skills and knowledge with other developers and lean on their strengths. This can also be challenging if you’re used to working alone. Constant communication and time management are just two of the skills you’ll need to practice to make sure everyone in your group works together to complete the project. 
 
-The completed application should meet the following criteria:
+Projects won’t provide you with a user story or acceptance criteria, because you and your group will create them once you decide which real-world problem your application will solve. This lack of constraints can be freeing in a way, because you have room to build what you want, but it also means that you have to decide what those constraints are before you can start working.
 
-* As a user, I want to add an image of my choice using a URL.
+Finally, a project requires a presentation, because you’re trying to convince an audience that it serves a purpose. Your instructional staff and fellow students are investors, and you’re pitching your creation to them&mdash;an experience that developers are required to do frequently. Your presentation is just as important as the actual project, so take it just as seriously.
 
-  * For example:
+## Project Requirements
 
-  ```md
-  https://static.bc-edx.com/coding/full-stack/04-Web-APIs/assets/100-m4-mini.png
-  ```
+You and your group will use everything you’ve learned over the past four modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
 
-* As a user, I want to drop that image into the mood board.
+* Be deployed to GitHub Pages.
 
-* As a user, I want to add some text to the mood board.
+* Be interactive (i.e., accept and respond to user input).
 
-* As a user, I want drag that text into the mood board.
+* Use a CSS framework (see suggestions).
 
-* As a user, I want to see the image or text being dragged as I move it into the mood board.
+* Include at least one modal instead of native browser alert, confirm, or prompt functionality. Look into the CSS framework's documentation for more information!
 
-* As a user, I want my mood board to be saved in local storage.
+* Use client-side storage to store persistent data.
 
-## Specifications
+* Be responsive.
 
-* Navigate to `Develop/assets/js/script.js` and complete the `TODO` sections.
+* Have a polished UI.
 
-* When a user pastes an image URL into the input field and clicks the "Add Image" button, the image should be draggable.
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
-* When a user clicks a draggable element on to the mood board, the element should be appended to the mood board in the position of the mouse.
+* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-* When a user enters text into the input field and clicks the "Add Text" button, the text should be draggable.
+### CSS Frameworks
 
-* When a user clicks the draggable element on to the mood board, the element should be appended to the mood board in the position of the mouse.
+One of the requirements for this project is to incorporate a CSS framework into your application.
 
-* When a user refreshes or returns to the browser page, the mood board should persist.
+> **hint** There are different ways to add these frameworks, but for the purposes of this front-end project, you'll need to use the **CDN option**.
 
-* When a user clicks the "Clear All" button, the mood board should be cleared and the local storage should be cleared.
+Look into one of the following CSS frameworks and add it to your project:
 
-## 💡 Notes
+* [Bootstrap](https://getbootstrap.com/)
 
-Refer to the documentation:
+* [Tailwind CSS](https://tailwindcss.com/)
 
-* [MDN Web Docs on addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+* [Materialize](https://materializecss.com/)
 
-* [MDN Web Docs on Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+* [Pure CSS](https://purecss.io/)
 
-* [MDN Web Docs on loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+* [Semantic UI](https://semantic-ui.com/)
 
-* [MDN Web Docs on MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)
+* [Foundation](https://get.foundation/)
 
-* [MDN Web Docs on getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+* [Bulma](https://bulma.io/)
 
-* [MDN Web Docs on localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+> **note** There are a lot of CSS frameworks out there&mdash;this is just a list to get you started. Feel free to use one not included in this list!
 
-## 🏆 Bonus
+## Presentation Requirements
 
-If you have completed this activity, work through the following challenge with your group to further your knowledge:
+Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
 
-* How can you make the elements on the mood board draggable after placement?
+* Elevator pitch: a one minute description of your application
 
-Use [Google](https://www.google.com) or another search engine to research this.
+* Concept: What is your user story? What was your motivation for development?
+
+* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+
+* Demo: Show your stuff!
+
+* Directions for Future Development
+
+* Links to the deployed application and the GitHub repository
+
+## Grading Requirements
+
+This project is graded based on the following criteria:
+
+### Technical Acceptance Criteria: 25%
+
+* Satisfies the following code requirements:
+
+  * Application uses client-side storage to store persistent data.
+
+  * Application uses a CSS framework.
+
+  * Application must include at least one modal instead of native browser alert, confirm, or prompt functionality. Look into the CSS framework's documentation for more information!
+
+  * Application is interactive (accepts and responds to user input).
+
+### Concept 10%
+
+* Application should be a unique and novel idea.
+
+* Your group should clearly and concisely articulate your project idea.
+
+### Deployment: 20%
+
+* Application deployed at live URL and loads with no errors.
+
+* Application GitHub URL submitted.
+
+### Repository Quality: 10%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains a quality README file with description, screenshot, and link to deployed application.
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate.
+
+* Application user interface style is clean and polished.
+
+* Application is responsive.
+
+### Presentation 10%
+
+* Your group should present using a slide deck.
+
+* Every group member should speak during the presentation.
+
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
+
+### Collaboration 10%
+
+* There are no major disparities in the number of GitHub contributions between group members.
+
+## How to Submit Your Interactive Front-End Project
+
+**Each member of your group** is required to submit the following for review:
+
+* The URL of the deployed application.
+
+* The URL of the GitHub repository, with a unique name and a README describing the project.
 
 ---
-
 © 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
