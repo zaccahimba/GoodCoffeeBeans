@@ -12,9 +12,9 @@ Finally, a project requires a presentation, because you’re trying to convince 
 
 You and your group will use everything you’ve learned over the past four modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
 
-* Be deployed to GitHub Pages.
+* Be deployed to GitHub Pages. DONE!
 
-* Be interactive (i.e., accept and respond to user input).
+* Be interactive (i.e., accept and respond to user input). 
 
 * Use a CSS framework (see suggestions).
 
@@ -61,14 +61,22 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 * Elevator pitch: a one minute description of your application
 
 * Concept: What is your user story? What was your motivation for development?
+  As a coffee lover // I want to be able to record my favorite brews and their recipes // so that I can recall them later and try them again.
 
 * Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+  * HTML
+  * JavaScript
+  * Bootstrap
 
 * Demo: Show your stuff!
+  * https://zaccahimba.github.io/StudentMiniProject05-01/ 
 
 * Directions for Future Development
 
 * Links to the deployed application and the GitHub repository
+  * GH Repo Link: https://github.com/zaccahimba/StudentMiniProject05-01
+  * GH Pages Deployed Link: https://zaccahimba.github.io/StudentMiniProject05-01/
+
 
 ## Grading Requirements
 
