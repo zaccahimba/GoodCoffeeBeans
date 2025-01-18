@@ -1,0 +1,25 @@
+:root {
+
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url('images/PIXNIO-coffee.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.5);
+}
