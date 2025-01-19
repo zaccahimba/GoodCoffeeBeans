@@ -5,51 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good Coffee Beans</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
-    <header>
-        <div class="row">
-            <div class="col-auto">
-                <h1>Good Coffee Beans</h1>
+<body class="vh-100 overflow-hidden">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+        <!-- Logo -->
+          <a class="navbar-brand fs-4" href="#">
+            <img class="logo" src="./images/logo.jpg" alt="logo">
+            Good Coffee Beans
+          </a>
+          <!-- Toggle Btn -->
+          <button 
+            class="navbar-toggler shadow-none border-0" 
+            type="button" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNavbar" 
+            aria-controls="offcanvasNavbar" 
+            aria-label="Toggle navigation"
+            >
+
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- SideBar -->
+          <div 
+            class="sidebar offcanvas offcanvas-start" 
+            tabindex="-1" id="offcanvasNavbar" 
+            aria-labelledby="offcanvasNavbarLabel"
+            >
+            <!-- Sidebar Header  -->
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Good Coffee Beans</h5>
+              <button 
+                    type="button" 
+                    class="btn-close btn-close-white shadow-none" 
+                    data-bs-dismiss="offcanvas" 
+                    aria-label="Close"
+                    >
+                </button>
             </div>
+            <!-- Sidebar Body -->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+              <ul class="navbar-nav justify-content-center align-items-center fa-5 flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#randomFlavorsOfTheDay">Flavor Of The Day</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#log">Coffee Log</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#myRecipes">My Recipes</a>
+                </li>
+              </ul>   
+            </div>
+          </div>
         </div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+      </nav>
+
+    <header>
+        
     </header>
     <main> 
         <section class="randomFlavorsOfTheDay">
@@ -58,11 +78,11 @@
         <section class="randomRecipesByUsers">
 
         </section>
-        
+
     </main>
     <footer> 
-        <h5>Made with ❤️ by Zachari Cahimba, John Goldade, and Ivelis Becker &copy2025</h5>
-    </footer>
+        <h6>Made with ❤️ by Zachari Cahimba, John Goldade, and Ivelis Becker &copy2025</h5>
+    </footer> 
     <script src="./scripts.js"></script>
 </body>
 </html>
