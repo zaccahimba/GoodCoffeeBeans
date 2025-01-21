@@ -9,6 +9,7 @@ body {
     background-image: url('images/PIXNIO-coffee.jpg');
     background-size: cover;
     background-attachment: fixed;
+}
 
 header {
     color: white;
