@@ -9,16 +9,79 @@
 </head>
 <body>
     <header>
-      <h1>Good Coffee Beans</h1>  
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #854442;">
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary"> -->
+          <div class="container-fluid">
+            <h1 class="navbar-brand fs-1" href="index.html">Good Coffee Beans</h1>
+            <img src="./images/logo.jpg" alt="Bootstrap" width="130" height="82">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html" style="color:#DFCCAF;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#randomFlavorOfTheDay" style="color:#DFCCAF;">Flavor of the Day</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color:#DFCCAF;">Coffee Recipes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-primary" href="#" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Coffee</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-primary" href="#YourRecipe" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Recipe</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
     </header>
     <main> 
-        <section class="randomFlavorsOfTheDay">
-
-        </section>
+        <div class="container" id="randomFlavorOfTheDay">
+          <div class="card" style="width: 18rem; background-color: #6F4436;">
+            <div class="card-body">
+              <h5 class="card-title">Flavor of the Day:</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Caramel Macchiato
+              </h6>
+              <img src="./images/caramel_macchiato.jpg" class="card-img-top" alt="caramel_macchiato">
+            </div>
+          </div> 
         <section class="randomRecipesByUsers">
 
         </section>
-        
+        <section class="YourRecipe">
+          <div class="container" id="randomFlavorOfTheDay">
+            <div class="card" style="width: 18rem; background-color: #854442;">
+              <div class="card-body">
+                <h5 class="card-title">Log Your Recipe:</h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="recipeTitle" class="form-label">Title:</label>
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="recipeTitle"
+                      placeholder="Caramel Macchiato"
+                    />
+                    <div class="invalid-feedback">Please provide a title.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="ingredients" class="form-label">Ingredients: </label>
+                    <textarea class="form-control" id="recipe" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="instructions" class="form-label">Instructions: </label>
+                    <textarea class="form-control" id="recipe" rows="3"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                  </div>
+                </form>
+        </section>
     </main>
     <footer> 
         <h5>Made with ❤️ by Zachari Cahimba, John Goldade, and Ivelis Becker &copy2025</h5>
