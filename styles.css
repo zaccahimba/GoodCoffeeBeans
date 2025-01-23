@@ -1,5 +1,4 @@
 :root {
-    /* Colors Palette: https://www.schemecolor.com/cup-of-coffee.php */
     --blackCoffee: #3C2F2F;
     --brandy: #854442;
     --desertSand: #DFCCAF;
@@ -11,37 +10,21 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-image: url("./images/PIXNIO-coffee.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url('images/PIXNIO-coffee.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
 
-body h1, h2, h3, h4, h5, h6, label {
-    color: var(--desertSand);
-}
-
-.navbar-brand img {
-    width: 100px;
-    padding: 0 1em;
-
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--blackCoffee);
-    color: var(--desertSand);
+    color: white;
     text-align: center;
-}
-
-@media (max-width: 992px) {
-    .sidebar {
-        background-color: var(--blackCoffee);
-        backdrop-filter: blur(20px);
-    }
+    padding: 30px;
+    background-color: rgba(0,0,0,0.5);
 }

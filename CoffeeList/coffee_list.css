@@ -1,0 +1,21 @@
+body {
+    background-image: url('../images/hot-chocolate-pine-cone-copy-space.jpg');
+    background-size:100%;
+}
+
+header {
+    color: whitesmoke;
+    background-color: rgba(24, 27, 27, 0.6);
+    
+}
+
+footer {
+    color:whitesmoke;
+    position: fixed;
+    bottom: 0;
+    margin: 20px;
+}
+
+.elPadding {
+    padding: 1%;
+}
