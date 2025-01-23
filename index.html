@@ -32,7 +32,7 @@
                   <a class="btn btn-primary" href="#" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Coffee</a>
                 </li>
                 <li class="nav-item">
-                  <a class="btn btn-primary" href="#" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Recipe</a>
+                  <a class="btn btn-primary" href="#YourRecipe" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Recipe</a>
                 </li>
               </ul>
             </div>
@@ -50,9 +50,37 @@
               <img src="./images/caramel_macchiato.jpg" class="card-img-top" alt="caramel_macchiato">
             </div>
           </div> 
-        </section>
         <section class="randomRecipesByUsers">
 
+        </section>
+        <section class="YourRecipe">
+          <div class="container" id="randomFlavorOfTheDay">
+            <div class="card" style="width: 18rem; background-color: #854442;">
+              <div class="card-body">
+                <h5 class="card-title">Log Your Recipe:</h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="recipeTitle" class="form-label">Title:</label>
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="recipeTitle"
+                      placeholder="Caramel Macchiato"
+                    />
+                    <div class="invalid-feedback">Please provide a title.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="ingredients" class="form-label">Ingredients: </label>
+                    <textarea class="form-control" id="recipe" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="instructions" class="form-label">Instructions: </label>
+                    <textarea class="form-control" id="recipe" rows="3"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                  </div>
+                </form>
         </section>
     </main>
     <footer> 
