@@ -1,12 +1,15 @@
-body {
-    background-image: url('../images/hot-chocolate-pine-cone-copy-space.jpg');
-    background-size:100%;
+:root {
+    --blackCoffee: #3C2F2F;
+    --brandy: #854442;
+    --desertSand: #DFCCAF;
+    --coffee: #6F4436;
+    --paleTaupe: #BE9B7B;
 }
 
-header {
-    color: whitesmoke;
-    background-color: rgba(24, 27, 27, 0.6);
-    
+body {
+    background-image: url('../images/hot-chocolate-pine-cone-copy-space.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 main {
@@ -19,7 +22,8 @@ main {
 
 
 footer {
-    color:whitesmoke;
+    color: var(--desertSand);
+    background-color: var(--blackCoffee);
     position: fixed;
     bottom: 0;
     margin: 20px;
