@@ -12,15 +12,6 @@ body {
     background-attachment: fixed;
 }
 
-main {
-    padding: 1%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-
-
 footer {
     color: var(--desertSand);
     background-color: var(--blackCoffee);
@@ -28,8 +19,3 @@ footer {
     bottom: 0;
     margin: 20px;
 }
-
-.elPadding {
-    padding: 1%;
-}
-
