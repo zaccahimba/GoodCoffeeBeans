@@ -1,6 +1,7 @@
 body {
     background-image: url('../images/hot-chocolate-pine-cone-copy-space.jpg');
-    background-size:100%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
