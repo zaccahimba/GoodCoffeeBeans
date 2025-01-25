@@ -15,6 +15,12 @@ body {
     background-attachment: fixed;
 }
 
+main {
+    height: calc(100vh - 17rem);
+    overflow-y: scroll;
+}
+
+
 header {
     color: var(--desertSand);
     text-align: center;
@@ -27,4 +33,7 @@ footer {
     text-align: center;
     padding: 30px;
     background-color: var(--blackCoffee);
+    width: 100%;
+    position: fixed;
+    top: calc(100% - 5rem);
 }
