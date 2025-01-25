@@ -6,20 +6,29 @@
     --paleTaupe: #BE9B7B;
 }
 
+
+
 body {
     background-image: url('../images/hot-chocolate-pine-cone-copy-space.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: calc(100vh - 17rem);
+    margin-bottom: 11vh;
+    overflow-y: scroll;
+}
+
 footer {
     color: var(--desertSand);
     background-color: var(--blackCoffee);
+    padding: 30px;
+    width: 100%;
     position: fixed;
-    bottom: 0;
-    margin: 20px;
-}
-
-.elPadding {
-    padding: 1%;
+    top: calc(100% - 5rem);
 }
