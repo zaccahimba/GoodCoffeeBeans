@@ -10,7 +10,6 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #854442;">
-        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary"> -->
           <div class="container-fluid">
             <h1 class="navbar-brand fs-1" href="index.html">Good Coffee Beans</h1>
             <img src="./images/logo.jpg" alt="Bootstrap" width="130" height="82">
@@ -29,10 +28,7 @@
                   <a class="nav-link" href="#" style="color:#DFCCAF;">Coffee Recipes</a>
                 </li>
                 <li class="nav-item">
-                  <a class="btn btn-primary" href="#" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Coffee</a>
-                </li>
-                <li class="nav-item">
-                  <a class="btn btn-primary" href="#YourRecipe" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Recipe</a>
+                  <a class="nav-link" href="./coffee_list.html" style="color:#DFCCAF;">Posts</a>
                 </li>
               </ul>
             </div>
@@ -40,16 +36,20 @@
         </nav>
     </header>
     <main> 
-        <div class="container" id="randomFlavorOfTheDay">
-          <div class="card" style="width: 18rem; background-color: #6F4436;">
+        <div class="col-sm-6 container" id="randomFlavorOfTheDay" style="color: #DFCCAF;">
+          <div class="card" style="background-color: #6F4436;">
+            <h5 class="card-header">Flavor of the Day:</h5>
             <div class="card-body">
-              <h5 class="card-title">Flavor of the Day:</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">
-                Caramel Macchiato
-              </h6>
+              <h5 class="card-title">Caramel Macchiato</h5>
               <img src="./images/caramel_macchiato.jpg" class="card-img-top" alt="caramel_macchiato">
             </div>
-          </div> 
+          </div>
+
+        <section class="buttons">
+          <button class="btn btn-primary" type="submit" class="btn btn-primary" href="#" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Coffee</button>
+          <button class="btn btn-primary" type="submit" class="btn btn-primary" href="#YourRecipe" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Recipe</button>
+        </section>
+
         <section class="randomRecipesByUsers">
 
         </section>
@@ -78,7 +78,7 @@
                     <textarea class="form-control" id="recipe" rows="3"></textarea>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary" type="submit" style="background-color:#DFCCAF; color:#3C2F2F; border-color: #6F4436;">Submit</button>
                   </div>
                 </form>
         </section>

@@ -1,21 +1,34 @@
-body {
-    background-image: url('../images/hot-chocolate-pine-cone-copy-space.jpg');
-    background-size:100%;
+:root {
+    --blackCoffee: #3C2F2F;
+    --brandy: #854442;
+    --desertSand: #DFCCAF;
+    --coffee: #6F4436;
+    --paleTaupe: #BE9B7B;
 }
 
-header {
-    color: whitesmoke;
-    background-color: rgba(24, 27, 27, 0.6);
-    
+
+
+body {
+    background-image: url('../images/hot-chocolate-pine-cone-copy-space.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: calc(100vh - 17rem);
+    margin-bottom: 11vh;
+    overflow-y: scroll;
 }
 
 footer {
-    color:whitesmoke;
+    color: var(--desertSand);
+    background-color: var(--blackCoffee);
+    padding: 30px;
+    width: 100%;
     position: fixed;
-    bottom: 0;
-    margin: 20px;
-}
-
-.elPadding {
-    padding: 1%;
+    top: calc(100% - 5rem);
 }

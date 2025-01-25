@@ -15,16 +15,25 @@ body {
     background-attachment: fixed;
 }
 
+main {
+    height: calc(100vh - 17rem);
+    overflow-y: scroll;
+}
+
+
 header {
-    color: white;
+    color: var(--desertSand);
     text-align: center;
     padding: 20px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: var(--brandy);
 }
 
 footer {
-    color: white;
+    color: var(--desertSand);
     text-align: center;
     padding: 30px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: var(--blackCoffee);
+    width: 100%;
+    position: fixed;
+    top: calc(100% - 5rem);
 }
