@@ -5,7 +5,6 @@ const coffeeName = document.querySelector('#coffeeName');
 const next = carousel.querySelector('.next');
 const prev = carousel.querySelector('.prev');
 let index = 0;
-// let currentImage;
 
 const coffeeNames = [
     'Butterscotch Latte',
@@ -18,9 +17,7 @@ const coffeeImage = [
     './images/butterscotch-latte.jpg',
     './images/peppermint_mocha_latte.jpg',
     './images/spicy-pumpkin-latte.jpg'
-];
-
-// TODO: create another querySelector, array, and function for the title. 
+]; 
 
 function navigate(direction) {
     index = index + direction;
