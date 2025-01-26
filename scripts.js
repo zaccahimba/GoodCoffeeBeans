@@ -10,6 +10,8 @@ const coffeeNames = [
     'Butterscotch Latte',
     'Peppermint Mocha',
     'Spicy Pumpkin Latte',
+    'Irish Coffee',
+    'Vienne Coffee'
 ]
 
 
