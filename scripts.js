@@ -10,6 +10,8 @@ const image = [
     './images/butterscotch-latte.jpg',
     './images/peppermint_mocha_latte.jpg',
     './images/spicy-pumpkin-latte.jpg'
+    './images/irishCoffee.jpg',
+    './images/wienCoffee.jpg'
 ];
 
 // TODO: create another querySelector, array, and function for the title. 

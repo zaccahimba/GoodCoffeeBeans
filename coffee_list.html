@@ -46,54 +46,92 @@
      
     </header>
 
-    <main class="d-flex p-2 gap-3 mt-5">
-        <div class="card border-light mb-3 text-center" style="max-width: 20rem;">
-            <div class="card-header">
-                <h4>Peppermint Mocha</h4>
+    <main>
+        <!-- Modal for entering the recipe for the cards. -->
+        <div class="modal fade" id="add-recipe" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Recipe</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="recipe-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Ingredients</label>
+                                <textarea class="form-control" id="ingredient-list"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Instructions</label>
+                                <textarea class="form-control" id="instructions-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Close</button>
+                        <button type="button" class="btn btn-primary" id="save">Save Recipe</button>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Info card title</h5>
-                <ul class="list-group list-group-flush"></ul>
-                    <li class="list-group-item">Coffee Shop: The Brew</li>
-                    <li class="list-group-item">Coffee Brand: N/A</li>
-                    <li class="list-group-item">Coffee Bean Variety: Arabica</li>
-                    <li class="list-group-item">Price: $6</li>
-                    <li class="list-group-item">Picture URL: N/A</li>
-                    <li class="list-group-item">
-                        <blockquote class="blockquote mb-0">
-                            <p>Coffee was awesome!</p>
-                        </blockquote>
-                    </li>
-              </ul>
-              <a href="#" class="btn btn-primary">Add Recipe</a>
+        </div>
+        <!-- Coffee section with a header -->
+        <div>
+            <h2 class="text-light h1 m-3 text-decoration-underline">Coffees</h2>
+        </div>
+        <section class="p-2 gap-3 mt-5" id="s1">
+            <!-- <div class="card border-light m-2 text-center" style="width: 20rem; max-height: fit-content; display: none">
+                <h4 class="card-header">Peppermint Mocha</h4>
+                <div class="card-body">
+                    <h5 class="card-title">Info card title</h5>
+                    <ul class="list-group list-group-flush"></ul>
+                        <li class="list-group-item">Coffee Shop: The Brew</li>
+                        <li class="list-group-item">Coffee Brand: N/A</li>
+                        <li class="list-group-item">Coffee Bean Variety: Arabica</li>
+                        <li class="list-group-item">Price: $6</li>
+                        <li class="list-group-item">Picture URL: N/A</li>
+                        <li class="list-group-item">
+                            <blockquote class="blockquote mb-0">
+                                <p>Coffee was awesome!</p>
+                            </blockquote>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-recipe">Add Recipe</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#view-recipe">View Recipe</button>
+                </div>
             </div>
-          </div>
 
-          <div class="card border-light mb-3 text-center" style="max-width: 20rem;">
-            <div class="card-header">
-                <h4>Americano</h4>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">January 23, 2025</h5>
-              <ul class="list-group list-group-flush"></ul>
-                    <li class="list-group-item">Coffee Shop: The Brew</li>
-                    <li class="list-group-item">Coffee Brand: N/A</li>
-                    <li class="list-group-item">Coffee Bean Variety: Arabica</li>
-                    <li class="list-group-item">Price: $6</li>
-                    <li class="list-group-item">Picture URL: N/A</li>
-                    <li class="list-group-item">
-                        <blockquote class="blockquote mb-0">
-                            <p>Coffee was awesome!</p>
-                        </blockquote>
-                    </li>
-              </ul>
-              <a href="#" class="btn btn-primary">Add Recipe</a>
-            </div>
-          </div>
+            <div class="card border-light m-2 text-center" style="width: 20rem; max-height: fit-content;">
+                <h4 class="card-header">Americano</h4>
+                <div class="card-body">
+                    <h5 class="card-title">January 23, 2025</h5>
+                    <ul class="list-group list-group-flush"></ul>
+                        <li class="list-group-item">Coffee Shop: The Brew</li>
+                        <li class="list-group-item">Coffee Brand: N/A</li>
+                        <li class="list-group-item">Coffee Bean Variety: Arabica</li>
+                        <li class="list-group-item">Price: $6</li>
+                        <li class="list-group-item">Picture URL: N/A</li>
+                        <li class="list-group-item">
+                            <blockquote class="blockquote mb-0">
+                                <p>Coffee was awesome!</p>
+                            </blockquote>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-recipe" data-bs-whatever="@mdo">Add Recipe</button>
+                </div>
+            </div> -->
+        </section>
+        <div>
+            <h2 class="text-light h1 m-3 text-decoration-underline">Recipes</h2>
+        </div>
+        <section class="p-2 gap-3 mt-5" id="s2"></section>
     </main>
 
     <footer>
-        <footer> 
+        <footer class="fixed-bottom"> 
             <h5>Made with ❤️ by Zachari Cahimba, John Goldade, and Ivelis Becker &copy2025</h5>
         </footer>
     </footer>
