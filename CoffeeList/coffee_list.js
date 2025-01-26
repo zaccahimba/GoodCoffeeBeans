@@ -1,5 +1,8 @@
 const sb = document.getElementById("save")
 const cb = document.querySelector('#close')
+const del = document.querySelector('#delete-msg')
+const deleteIt = document.querySelector('#del-yes')
+const cb2 = document.querySelector('#no')
 
 
 function cI() {
@@ -61,7 +64,6 @@ function buildC() {
         arB.setAttribute('type', 'button')
         arB.setAttribute('data-bs-toggle', 'modal')
         arB.setAttribute('data-bs-target', '#add-recipe')
-        // arB.setAttribute('id', `a${i}`)
         arB.classList.add('btn')
         arB.classList.add('btn-primary')
         arB.classList.add('m-1')
@@ -107,7 +109,7 @@ function storeR() {
         localStorage.setItem('recipes', JSON.stringify(rA))
     }
     cb.click()
-    buildR()
+    reload()
 }
 
 
@@ -116,6 +118,27 @@ function rI() {
     const log2 = JSON.parse(localStorage.getItem("recipes"))
     return log2
   }
+
+function storeD() {
+    const ds = document.querySelector('#del-num')
+    const dv = Number(ds.value)
+    return dv
+}
+
+function deleteRecipe() {
+    const value = storeD()
+    const newV = value - 1
+    let recs = rI()
+    const rArray = []
+    for (i = 0; i < recs.length; i++) {
+        const item = recs[i]
+        rArray.push(item)
+    }
+    rArray.splice(newV, 1)
+    localStorage.setItem('recipes', JSON.stringify(rArray))
+    cb2.click()
+    reload()
+}
 
 function buildR() {
     let logs2 = rI()
@@ -130,13 +153,11 @@ function buildR() {
         cb.classList.add('border-light')
         cb.classList.add('m-2')
         cb.setAttribute('style', 'width: 20rem; max-height: fit-content;')
-        cb.setAttribute('id', `c${i}`)
         const h = document.createElement('h4')
         h.classList.add('card-header')
         h.textContent = `${j}.  ${name}`
         const b = document.createElement('div')
         b.classList.add('card-body')
-        b.setAttribute('id', `${i}`)
         const ul = document.createElement('ul')
         ul.classList.add('list-group')
         ul.classList.add('list-group-flush')
@@ -160,24 +181,10 @@ function buildR() {
 }
 buildR()
 
-function delId() {
-    const db = document.querySelectorAll ('btn-outline-danger')
-    db.forEach(element => {
-        element.addEventListener('click', event => {
-        let parent = event.target.parentElement.id
-        console.log(parent)
-        });
-    })
+function reload() {
+    location.reload()
 }
 
-setTimeout(delId(), 20)
-
+del.addEventListener('click', storeD)
+deleteIt.addEventListener('click', deleteRecipe)
 sb.addEventListener('click', storeR)
-// const forms = []
-// const info = {name: 'Espresso', date: '1/25/25', coffeeShop: 'Scooters', brand: 'Folgers', variety: 'Columbian', price: '$7', image: 'n/a', comments: 'It was very delicious.'}
-// forms.push(info)
-// localStorage.setItem('form', JSON.stringify(forms))
-// const rec = []
-// const reci = {name: 'Mocha Breve', ingredients: '-coffee -heavy cream -chocolate syrup', instructions: 'Make coffee and blend it all together.'}
-// rec.push(reci)
-// localStorage.setItem('recipes', JSON.stringify(rec))
