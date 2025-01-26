@@ -11,7 +11,9 @@ const coffeeNames = [
     'Peppermint Mocha',
     'Spicy Pumpkin Latte',
     'Irish Coffee',
-    'Vienne Coffee'
+    'Vienna Coffee',
+    'Cuban Coffee',
+    'Caramel Macchiato'
 ]
 
 
@@ -20,7 +22,9 @@ const coffeeImage = [
     './images/peppermint_mocha_latte.jpg',
     './images/spicy-pumpkin-latte.jpg',
     './images/irishCoffee.jpg',
-    './images/wienCoffee.jpg'
+    './images/viennaCoffee.jpg',
+    './images/cubanCoffee.jpg',
+    './images/caramel_macchiato.jpg'
 ];
 
 // TODO: create another querySelector, array, and function for the title. 
