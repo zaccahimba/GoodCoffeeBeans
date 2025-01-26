@@ -20,6 +20,11 @@ main {
     overflow-y: scroll;
 }
 
+.img {
+    max-height: 2000px;
+    max-width: 2000px;
+}
+
 
 header {
     color: var(--desertSand);
