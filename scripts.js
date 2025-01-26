@@ -1,5 +1,5 @@
 const carousel = document.querySelector('#randomFlavorOfTheDay');
-const images = document.querySelector('#coffee');
+const images = document.querySelector('#coffee'); 
 
 const next = carousel.querySelector('.next');
 const prev = carousel.querySelector('.prev');
