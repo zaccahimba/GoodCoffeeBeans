@@ -16,8 +16,12 @@ const coffeeNames = [
 const coffeeImage = [
     './images/butterscotch-latte.jpg',
     './images/peppermint_mocha_latte.jpg',
-    './images/spicy-pumpkin-latte.jpg'
-]; 
+    './images/spicy-pumpkin-latte.jpg',
+    './images/irishCoffee.jpg',
+    './images/wienCoffee.jpg'
+];
+
+// TODO: create another querySelector, array, and function for the title. 
 
 function navigate(direction) {
     index = index + direction;
@@ -33,8 +37,3 @@ function navigate(direction) {
 
 next.addEventListener('click', () => navigate(1)); 
 prev.addEventListener('click', () => navigate(-1));
-
-
-
-
-
