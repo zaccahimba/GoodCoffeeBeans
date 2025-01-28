@@ -1,15 +1,18 @@
+/* Global color variables */
 :root {
     --blackCoffee: #3C2F2F;
     --brandy: #854442;
     --desertSand: #DFCCAF;
     --coffee: #6F4436;
     --paleTaupe: #BE9B7B;
+    --sand: #e6d5bb;
+    --fadedBrandy: rgb(133, 68, 66, 0.5);
+    --fadedBlackCoffee: rgb(60, 47, 47, 0.4);
+    --fadedSand: rgb(230, 213, 187, 0.6);
 }
 
+/* Element styling */
 body {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     background-image: url('images/PIXNIO-coffee.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -17,13 +20,20 @@ body {
 
 main {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.img {
-    max-height: 2000px;
-    max-width: 2000px;
-}
+blockquote {
+  text-align: center;
+  color: var(--sand);
+  background-color: var(--fadedBlackCoffee);
+  border-style: solid;
+  border-color: var(--fadedSand);
 
+}
 
 header {
     color: var(--desertSand);
@@ -40,11 +50,24 @@ footer {
     width: 100%;
 }
 
+/* Class styling */
+.img {
+  max-height: 2000px;
+  max-width: 2000px;
+}
 
-/* {box-sizing: border-box;} */
+.link {
+  color: var(--desertSand)
+}
+
+/* Changes the color of the navbar links when hovering over them */
+.link:hover {
+  color: var(--paleTaupe)
+}
 
 
-/* Button used to open the coffee log form - fixed at the bottom of the page */
+
+/* Button used to open the coffee log form - fixed at the bottom of the page
 .open-button {
   background-color: #555;
   color: white;
@@ -58,7 +81,7 @@ footer {
   width: 280px;
 }
 
-/* The popup form - hidden by default */
+The popup form - hidden by default
 .form-popup {
   display: none;
   position: fixed;
@@ -68,14 +91,14 @@ footer {
   z-index: 9;
 }
 
-/* Add styles to the form container */
+Add styles to the form container
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
-/* Full-width input fields */
+Full-width input fields
 .form-container input[type=text], .form-container input[type=password] {
   width: 100%;
   padding: 15px;
@@ -84,13 +107,13 @@ footer {
   background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
+When the inputs get focus, do something
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/login button */
+Set a style for the submit/login button
 .form-container .btn {
   background-color: #04AA6D;
   color: white;
@@ -102,12 +125,12 @@ footer {
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
+Add a red background color to the cancel button
 .form-container .cancel {
   background-color: red;
 }
 
-/* Add some hover effects to buttons */
+Add some hover effects to buttons
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
-}
+} */

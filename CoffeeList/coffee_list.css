@@ -1,3 +1,4 @@
+/* Global color variables */
 :root {
     --blackCoffee: #3C2F2F;
     --brandy: #854442;
@@ -6,6 +7,7 @@
     --paleTaupe: #BE9B7B;
 }
 
+/* Element styling */
 body {
     background-image: url('../images/hot-chocolate-pine-cone-copy-space.jpg');
     background-size: cover;
@@ -13,6 +15,9 @@ body {
 }
 
 header {
+    color: var(--desertSand);
+    text-align: center;
+    padding: 20px;
     background-color: var(--brandy);
 }
 
@@ -39,7 +44,17 @@ footer {
     width: 100%;
 }
 
+/* Class styling */
 .button {
     max-height: fit-content;
 }
+
+.link {
+    color: var(--desertSand)
+  }
+  
+/* Changes the color of the navbar links when hovering over them */
+.link:hover {
+    color: var(--paleTaupe)
+  }
 
