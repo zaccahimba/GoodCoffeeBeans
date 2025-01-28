@@ -27,7 +27,49 @@ const coffeeImage = [
     './images/caramel_macchiato.jpg'
 ];
 
+const todayCoffee = [{
+    name: 'Butterscotch Latte',
+    image: './images/butterscotch-latte.jpg'
+},
+{ 
+    name:  'Peppermint Mocha',
+    image: './images/peppermint_mocha_latte.jpg'
+},
+{
+    name: 'Spicy Pumpkin Latte',
+    image: './images/spicy-pumpkin-latte.jpg'
+},
+{
+    name:   'Irish Coffee',
+    image: './images/irishCoffee.jpg'
+},
+{
+    name: 'Vienna Coffee',
+    image: './images/viennaCoffee.jpg'
+},
+{
+    name: 'Cuban Coffee',
+    image: './images/cubanCoffee.jpg'
+},
+{
+    name: 'Caramel Macchiato',
+    image: './images/caramel_macchiato.jpg'
+}
+]
+
 // TODO: create another querySelector, array, and function for the title. 
+
+function getRandomCoffee () {
+    let randomCoffee = Math.floor (Math.random () * todayCoffee.length);
+    return todayCoffee[randomCoffee];
+}
+const coffee1 = getRandomCoffee();
+
+coffee1.name;
+coffee1.image;
+
+images.setAttribute('src', coffee1.image);
+coffeeName.textContent = coffee1.name;
 
 function navigate(direction) {
     index = index + direction;
