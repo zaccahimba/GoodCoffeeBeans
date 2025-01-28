@@ -1,7 +1,17 @@
+// function for form: "Log Your Coffee"
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
 
-// stores user data from form "Log Your Coffee"
-const recipeTitle = { title: 'Americano’, ingredients:  };
-localStorage.setItem('recipeTitle', JSON.stringify(recipeTitle)),
-
-// stores user data from form "Log Your Recipe"
-
+// function for form: "Log Your Recipe"
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }

@@ -1,8 +1,8 @@
-// const addRec = document.querySelectorAll(`#a${formV}`)
-// const viewRec = document.querySelectorAll(`#v${formV}`)
-const sb = document.querySelector('#save')
+const sb = document.getElementById("save")
 const cb = document.querySelector('#close')
-const db = document.querySelector('#delete')
+const del = document.querySelector('#delete-msg')
+const deleteIt = document.querySelector('#del-yes')
+const cb2 = document.querySelector('#no')
 
 
 function cI() {
@@ -21,7 +21,7 @@ function buildC() {
         const price = logs[i].price
         const picture = logs[i].image
         const comments = logs[i].comments
-        const main = document.querySelector('#s1')
+        const sec1 = document.getElementById('s1')
         const cb = document.createElement('div')
         cb.classList.add('card')
         cb.classList.add('border-light')
@@ -64,33 +64,22 @@ function buildC() {
         arB.setAttribute('type', 'button')
         arB.setAttribute('data-bs-toggle', 'modal')
         arB.setAttribute('data-bs-target', '#add-recipe')
-        arB.setAttribute('id', `a${i}`)
         arB.classList.add('btn')
         arB.classList.add('btn-primary')
         arB.classList.add('m-1')
         arB.textContent = 'Add Recipe'
-        // const vrB = document.createElement('button')
-        // vrB.setAttribute('type', 'button')
-        // vrB.setAttribute('data-bs-toggle', 'modal')
-        // vrB.setAttribute('data-bs-target', '#view-recipe')
-        // vrB.setAttribute('id', `v${i}`)
-        // vrB.classList.add('btn')
-        // vrB.classList.add('btn-primary')
-        // vrB.classList.add('m-1')
-        // vrB.textContent = 'View Recipe'
-        cb.appendChild(h)
-        cb.appendChild(b)
         b.appendChild(h5)
-        b.appendChild(ul)
         ul.appendChild(li1)
         ul.appendChild(li2)
         ul.appendChild(li3)
         ul.appendChild(li4)
         ul.appendChild(li5)
         ul.appendChild(li6)
+        b.appendChild(ul)
         b.appendChild(arB)
-        // b.appendChild(vrB)
-        main.appendChild(cb)
+        cb.appendChild(h)
+        cb.appendChild(b)
+        sec1.appendChild(cb)
     }
 }
 buildC()
@@ -120,21 +109,45 @@ function storeR() {
         localStorage.setItem('recipes', JSON.stringify(rA))
     }
     cb.click()
-    buildR()
+    reload()
 }
+
+
 
 function rI() {
     const log2 = JSON.parse(localStorage.getItem("recipes"))
     return log2
   }
 
+function storeD() {
+    const ds = document.querySelector('#del-num')
+    const dv = Number(ds.value)
+    return dv
+}
+
+function deleteRecipe() {
+    const value = storeD()
+    const newV = value - 1
+    let recs = rI()
+    const rArray = []
+    for (i = 0; i < recs.length; i++) {
+        const item = recs[i]
+        rArray.push(item)
+    }
+    rArray.splice(newV, 1)
+    localStorage.setItem('recipes', JSON.stringify(rArray))
+    cb2.click()
+    reload()
+}
+
 function buildR() {
     let logs2 = rI()
     for (i = 0; i < logs2.length; i++) {
+        const j = i + 1
         const name = logs2[i].name
         const ingredients = logs2[i].ingredients
         const instructions = logs2[i].instructions
-        const main = document.querySelector('#s2')
+        const sec2 = document.querySelector('#s2')
         const cb = document.createElement('div')
         cb.classList.add('card')
         cb.classList.add('border-light')
@@ -142,7 +155,7 @@ function buildR() {
         cb.setAttribute('style', 'width: 20rem; max-height: fit-content;')
         const h = document.createElement('h4')
         h.classList.add('card-header')
-        h.textContent = name
+        h.textContent = `${j}.  ${name}`
         const b = document.createElement('div')
         b.classList.add('card-body')
         const ul = document.createElement('ul')
@@ -156,38 +169,22 @@ function buildR() {
         li2.classList.add('list-group-item')
         const pre2 = document.createElement('pre')
         pre2.textContent = instructions
-        const db = document.createElement('button')
-        db.classList.add('btn')
-        db.classList.add('btn-outline-danger')
-        db.setAttribute('id', 'delete')
-        db.textContent = 'Delete'
         cb.appendChild(h)
         cb.appendChild(b)
         b.appendChild(ul)
-        b.appendChild(db)
         ul.appendChild(li1)
         li1.appendChild(pre1)
         ul.appendChild(li2)
         li2.appendChild(pre2)
-        main.appendChild(cb)
+        sec2.appendChild(cb)
     }
 }
 buildR()
-// function delR() {
-//     const di = event.target.parentNode
-//     di.setAttribute('style', 'display: none')
-// }
 
+function reload() {
+    location.reload()
+}
 
+del.addEventListener('click', storeD)
+deleteIt.addEventListener('click', deleteRecipe)
 sb.addEventListener('click', storeR)
-// db.addEventListener('click', delR)
-// addRec.addEventListenr('click', addRecipe)
-// viewRec.addEventListenr('click', viewRecipe)
-// const forms = []
-// const info = {name: 'Espresso', date: '1/25/25', coffeeShop: 'Scooters', brand: 'Folgers', variety: 'Columbian', price: '$7', image: 'n/a', comments: 'It was very delicious.'}
-// forms.push(info)
-// localStorage.setItem('form', JSON.stringify(forms))
-// const rec = []
-// const reci = {name: 'Mocha Breve', ingredients: '-coffee -heavy cream -chocolate syrup', instructions: 'Make coffee and blend it all together.'}
-// rec.push(reci)
-// localStorage.setItem('recipes', JSON.stringify(rec))
