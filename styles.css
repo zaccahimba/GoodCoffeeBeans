@@ -16,8 +16,7 @@ body {
 }
 
 main {
-    height: calc(100vh - 17rem);
-    overflow-y: scroll;
+    min-height: 100vh;
 }
 
 .img {
