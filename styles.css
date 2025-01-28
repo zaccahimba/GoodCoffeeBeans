@@ -36,11 +36,9 @@ header {
 footer {
     color: var(--desertSand);
     text-align: center;
-    padding: 30px;
+    padding: 5px;
     background-color: var(--blackCoffee);
     width: 100%;
-    position: fixed;
-    top: calc(100% - 5rem);
 }
 
 /* {box-sizing: border-box;} */
