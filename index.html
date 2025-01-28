@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good Coffee Beans</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -12,7 +12,7 @@
     <header class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html" style="color:#DFCCAF">Good Coffee Beans</a>
+          <a class="navbar-brand fs-1" href="index.html" style="color:#DFCCAF">Good Coffee Beans</a>
           <img src="./images/logo.jpg" alt="Bootstrap" width="130" height="82">
           <button class="navbar-toggler border border-light " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,6 +37,87 @@
       </nav>
     </header>
     <main> 
+      <!-- Modal for entering the recipe for the cards. -->
+      <div class="modal fade" id="add-recipe" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="inert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Recipe</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Name</label>
+                            <input type="text" class="form-control" id="recipe-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Ingredients</label>
+                            <textarea class="form-control" id="ingredient-list"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Instructions</label>
+                            <textarea class="form-control" id="instructions-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Close</button>
+                    <button type="button" class="btn btn-primary" id="save">Save Recipe</button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Modal for entering the recipe for the cards. -->
+      <div class="modal fade" id="add-coffee" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="inert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Coffee</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Name</label>
+                            <input type="text" class="form-control" id="coffee-name" placeholder="Mocha">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Date</label>
+                            <input type="text" class="form-control" id="date" placeholder="January 27, 2025">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Coffee Shop Name</label>
+                            <input type="text" class="form-control" id="cs-name" placeholder="Radina's">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Coffee Brand</label>
+                          <input type="text" class="form-control" id="c-b" placeholder="Radina's Own">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Coffee Variety</label>
+                          <input type="text" class="form-control" id="c-v" placeholder="Arabica">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Price</label>
+                          <input type="text" class="form-control" id="price" placeholder="$7.25">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Comments</label>
+                          <textarea class="form-control" id="comments"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveC">Save Coffee</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
         <div class="col-sm-6 container" id="randomFlavorOfTheDay" style="color: #DFCCAF;">
           <div class="card" style="background-color: #6F4436;">
             <h5 class="card-header">Flavor of the Day:</h5>
@@ -44,62 +125,18 @@
               <h5 class="card-title" id="coffeeName">Caramel Macchiato</h5>
               <img src="./images/caramel_macchiato.jpg" class="card-img-top img" id="coffee" alt="caramel_macchiato">
               <div class="wrapper">
-                <div class="carouselbox" aria-role="img" aria-label="carousel">
-                  <!-- <button class="prev" style="background-color: #DFCCAF; color:#854442; border-color: #6F4436;">
-                   <-- Previous
-                  </button>
-                  <button class="next" style="background-color: #DFCCAF; color:#854442; border-color: #6F4436;">
-                     Next
-                  </button> -->
-                  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button> -->
-                </div> 
+                <div class="carouselbox" aria-role="img" aria-label="carousel"></div> 
               </div>
             </div>
           </div>
 
         <section class="buttons">
-          <button class="btn btn-primary" type="submit" class="btn btn-primary" href="#" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Coffee</button>
-          <button class="btn btn-primary" type="submit" class="btn btn-primary" href="#YourRecipe" role="button" style="color: #854442; border-color: #6F4436; background-color: #DFCCAF;">Log Your Recipe</button>
+          <button type="button" class="btn btn-light m-3" data-bs-toggle="modal" data-bs-target="#add-coffee" style="background-color:#DFCCAF">Add Coffee</button>
+          <button type="button" class="btn btn-light m-3" data-bs-toggle="modal" data-bs-target="#add-recipe" style="background-color:#DFCCAF">Add Recipe</button>
         </section>
 
         <section class="randomRecipesByUsers">
 
-        </section>
-        <section class="YourRecipe">
-          <div class="container" id="randomFlavorOfTheDay">
-            <div class="card" style="width: 18rem; background-color: #854442;">
-              <div class="card-body">
-                <h5 class="card-title">Log Your Recipe:</h5>
-                <form>
-                  <div class="mb-3">
-                    <label for="recipeTitle" class="form-label">Title:</label>
-                    <input
-                      type="name"
-                      class="form-control"
-                      id="recipeTitle"
-                      placeholder="Caramel Macchiato"
-                    />
-                    <div class="invalid-feedback">Please provide a title.</div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="ingredients" class="form-label">Ingredients: </label>
-                    <textarea class="form-control" id="recipe" rows="3"></textarea>
-                  </div>
-                  <div class="mb-3">
-                    <label for="instructions" class="form-label">Instructions: </label>
-                    <textarea class="form-control" id="recipe" rows="3"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-primary" type="submit" style="background-color:#DFCCAF; color:#3C2F2F; border-color: #6F4436;">Submit</button>
-                  </div>
-                </form>
         </section>
     </main>
     <footer> 
