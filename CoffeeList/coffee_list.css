@@ -12,6 +12,10 @@ body {
     background-attachment: fixed;
 }
 
+header {
+    background-color: var(--brandy);
+}
+
 section {
     display: flex;
     flex-direction: row;
