@@ -35,10 +35,8 @@ pre {
 footer {
     color: var(--desertSand);
     background-color: var(--blackCoffee);
-    padding: 30px;
+    padding: 5px;
     width: 100%;
-    position: fixed;
-    top: calc(100% - 5rem);
 }
 
 .button {
