@@ -58,7 +58,7 @@ function buildC() {
         const li6 = document.createElement('li')
         li6.classList.add('list-group-item')
         const bq = document.createElement('blockquote')
-        bq.classList.add('blockquote')
+        // bq.classList.add('blockquote')
         bq.classList.add('mb-0')
         bq.textContent = comments
         const arB = document.createElement('button')
@@ -74,6 +74,7 @@ function buildC() {
         ul.appendChild(li2)
         ul.appendChild(li3)
         ul.appendChild(li4)
+        li6.appendChild(bq)
         ul.appendChild(li6)
         b.appendChild(ul)
         b.appendChild(arB)
