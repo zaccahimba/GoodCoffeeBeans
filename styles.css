@@ -24,6 +24,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 blockquote {
@@ -54,6 +55,10 @@ footer {
 .img {
   max-height: 2000px;
   max-width: 2000px;
+}
+
+.abtns {
+  justify-content: flex-end;
 }
 
 .link {
