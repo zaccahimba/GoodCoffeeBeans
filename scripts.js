@@ -83,5 +83,5 @@ function navigate(direction) {
     coffeeName.textContent = coffeeNames[index];
 };
 
-next.addEventListener('click', () => navigate(1)); 
-prev.addEventListener('click', () => navigate(-1));
+// next.addEventListener('click', () => navigate(1)); 
+// prev.addEventListener('click', () => navigate(-1));
