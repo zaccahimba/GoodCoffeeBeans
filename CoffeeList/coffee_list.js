@@ -1,5 +1,5 @@
 // Global variables queried from coffee_list.html
-const sb = document.getElementById("save")
+const sb = document.querySelector('#save')
 const cb = document.querySelector('#close')
 const del = document.querySelector('#delete-msg')
 const deleteIt = document.querySelector('#del-yes')
@@ -14,6 +14,9 @@ function cI() {
 // Function to build the coffee cards and append them to the DOM
 function buildC() {
     let logs = cI()
+    if (logs === null) {
+        return 
+    } else {
     for (i = 0; i < logs.length; i++) {
         const name = logs[i].name
         const date = logs[i].date
@@ -79,6 +82,7 @@ function buildC() {
         sec1.appendChild(cb)
     }
 }
+}
 buildC()
 
 // Function to store the completed recipe forms if the user wants to add a recipe from a coffee card
@@ -86,7 +90,7 @@ function storeR() {
     const rn = document.querySelector('#recipe-name')
     const ing = document.querySelector('#ingredient-list')
     const ins = document.querySelector('#instructions-text')
-    const recipes = JSON.parse(localStorage.getItem('recipes'))
+    const recipes = rI()
     const rA = []
     const modalE = {
         name: rn.value,
@@ -141,6 +145,9 @@ function deleteRecipe() {
 // Function to build the recipe cards and append them to the DOM
 function buildR() {
     let logs2 = rI()
+    if (logs2 === null) {
+        return
+    } else {
     for (i = 0; i < logs2.length; i++) {
         const j = i + 1
         const name = logs2[i].name
@@ -178,6 +185,8 @@ function buildR() {
         sec2.appendChild(cb)
     }
 }
+}
+
 buildR()
 
 // Function to trigger a browser page reload
