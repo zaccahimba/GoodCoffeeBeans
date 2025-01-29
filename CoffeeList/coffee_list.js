@@ -21,7 +21,6 @@ function buildC() {
         const brand = logs[i].brand
         const beanVar = logs[i].variety
         const price = logs[i].price
-        const picture = logs[i].image
         const comments = logs[i].comments
         const sec1 = document.getElementById('s1')
         const cb = document.createElement('div')
@@ -53,9 +52,6 @@ function buildC() {
         const li4 = document.createElement('li')
         li4.classList.add('list-group-item')
         li4.textContent = `Price: ${price}`
-        const li5 = document.createElement('li')
-        li5.classList.add('list-group-item')
-        li5.textContent = `Picture URL: ${picture}`
         const li6 = document.createElement('li')
         li6.classList.add('list-group-item')
         const bq = document.createElement('blockquote')
@@ -75,7 +71,6 @@ function buildC() {
         ul.appendChild(li2)
         ul.appendChild(li3)
         ul.appendChild(li4)
-        ul.appendChild(li5)
         ul.appendChild(li6)
         b.appendChild(ul)
         b.appendChild(arB)
