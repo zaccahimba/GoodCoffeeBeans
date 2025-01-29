@@ -1,15 +1,17 @@
+// Global variables queried from coffee_list.html
 const sb = document.getElementById("save")
 const cb = document.querySelector('#close')
 const del = document.querySelector('#delete-msg')
 const deleteIt = document.querySelector('#del-yes')
 const cb2 = document.querySelector('#no')
 
-
+// Function to call filled coffee forms from local storage
 function cI() {
     const log1 = JSON.parse(localStorage.getItem("form"))
     return log1
   }
 
+// Function to build the coffee cards and append them to the DOM
 function buildC() {
     let logs = cI()
     for (i = 0; i < logs.length; i++) {
@@ -19,7 +21,6 @@ function buildC() {
         const brand = logs[i].brand
         const beanVar = logs[i].variety
         const price = logs[i].price
-        const picture = logs[i].image
         const comments = logs[i].comments
         const sec1 = document.getElementById('s1')
         const cb = document.createElement('div')
@@ -51,9 +52,6 @@ function buildC() {
         const li4 = document.createElement('li')
         li4.classList.add('list-group-item')
         li4.textContent = `Price: ${price}`
-        const li5 = document.createElement('li')
-        li5.classList.add('list-group-item')
-        li5.textContent = `Picture URL: ${picture}`
         const li6 = document.createElement('li')
         li6.classList.add('list-group-item')
         const bq = document.createElement('blockquote')
@@ -73,7 +71,6 @@ function buildC() {
         ul.appendChild(li2)
         ul.appendChild(li3)
         ul.appendChild(li4)
-        ul.appendChild(li5)
         ul.appendChild(li6)
         b.appendChild(ul)
         b.appendChild(arB)
@@ -84,8 +81,7 @@ function buildC() {
 }
 buildC()
 
-const rA = []
-
+// Function to store the completed recipe forms if the user wants to add a recipe from a coffee card
 function storeR() {
     const rn = document.querySelector('#recipe-name')
     const ing = document.querySelector('#ingredient-list')
@@ -113,18 +109,20 @@ function storeR() {
 }
 
 
-
+// Function to call filled recipe forms from local storage
 function rI() {
     const log2 = JSON.parse(localStorage.getItem("recipes"))
     return log2
   }
 
+// Function to store the recipe number the user wants to delete
 function storeD() {
     const ds = document.querySelector('#del-num')
     const dv = Number(ds.value)
     return dv
 }
 
+// Function to remove the recipe that the user has chosen to delete from the local storage array
 function deleteRecipe() {
     const value = storeD()
     const newV = value - 1
@@ -140,6 +138,7 @@ function deleteRecipe() {
     reload()
 }
 
+// Function to build the recipe cards and append them to the DOM
 function buildR() {
     let logs2 = rI()
     for (i = 0; i < logs2.length; i++) {
@@ -181,10 +180,12 @@ function buildR() {
 }
 buildR()
 
+// Function to trigger a browser page reload
 function reload() {
     location.reload()
 }
 
+// Event listeners for the relevant buttons
 del.addEventListener('click', storeD)
 deleteIt.addEventListener('click', deleteRecipe)
 sb.addEventListener('click', storeR)
