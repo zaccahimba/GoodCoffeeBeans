@@ -1,10 +1,11 @@
+//Global variables queried from index.html
 const Savebutton1 = document.querySelector('#saveC')
 const Savebutton2 = document.querySelector('#save')
-
 const modalclosebutton = document.querySelector('#close1')
 const modalclosebutton2 = document.querySelector('#close2')
 
-  function storeC() {
+//Function to store the coffee form data in local storage
+function storeC() {
     const coffeelog1 = cI()
     const coffeename = document.querySelector('#coffee-name')
     const date = document.querySelector('#date')
@@ -38,15 +39,19 @@ const modalclosebutton2 = document.querySelector('#close2')
     modalclosebutton2.click()
     reload()
 }
+
+//Function to reload the webpage
 function reload() {
   location.reload()
 }
 
+//Function to pull the array of coffee form information objects from local storage
 function cI() {
   const log1 = JSON.parse(localStorage.getItem("form"))
   return log1
 }
 
+//Function to store the recipe in local storage
 function storeR() {
   const recipeform = rI()
   const rn = document.querySelector('#recipe-name')
@@ -74,11 +79,13 @@ function storeR() {
   reload()
 }
 
+//Function to pull the array of recipe information objects from local storage
 function rI() {
   const log2 = JSON.parse(localStorage.getItem("recipes"))
   return log2
 }
 
+// Event listeners for the relevant buttons
 Savebutton1.addEventListener('click', storeC)
 Savebutton2.addEventListener('click', storeR)
 
