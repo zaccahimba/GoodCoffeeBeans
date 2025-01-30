@@ -1,150 +1,57 @@
-# 05 Project 1: Interactive Front-End Application
+# Good Coffee Beans
 
-At the conclusion of each phase of this course, you’ll work with a group of your fellow students to create a **project**. A project is collaborative work among a group of developers to create an application that solves a real-world problem. Projects model the experience you’ll encounter in every development role at any company, from large multinational businesses to small startups. Coding is collaborative.
+Welcome to GoodCoffeeBeans!
 
-A project is a bit different from the Challenge assignments you’ve worked on so far. One of the biggest differences is that you’ll no longer build an application by yourself! This has some advantages&mdash;you won’t have to do all of the work, you can divide up duties, and you can share skills and knowledge with other developers and lean on their strengths. This can also be challenging if you’re used to working alone. Constant communication and time management are just two of the skills you’ll need to practice to make sure everyone in your group works together to complete the project. 
+This project helps users to log their coffee drinks and recipes. In addition, it offers suggestions for coffees, and it has a button that helps you find coffee shops near you. 
 
-Projects won’t provide you with a user story or acceptance criteria, because you and your group will create them once you decide which real-world problem your application will solve. This lack of constraints can be freeing in a way, because you have room to build what you want, but it also means that you have to decide what those constraints are before you can start working.
+This project helps the earth by keeping your coffee experience logs online and easy to track. Say goodbye to those notebooks that consistently disappear! 
 
-Finally, a project requires a presentation, because you’re trying to convince an audience that it serves a purpose. Your instructional staff and fellow students are investors, and you’re pitching your creation to them&mdash;an experience that developers are required to do frequently. Your presentation is just as important as the actual project, so take it just as seriously.
+Click the link and start today to add that coffee that you are drinking. No need for sign-ups or to have an account. It is well saved in your favorite device!
 
-## Project Requirements
+## Description
 
-You and your group will use everything you’ve learned over the past four modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
+A recipe collection for my favorite coffees with a daily suggestion of which one to try, a form to fill out coffees and their recipes as I come across them, and a page dedicated to listing my recipes for ease of finding them.
 
-* Be deployed to GitHub Pages. DONE!
+Our User Story
 
-* Be interactive (i.e., accept and respond to user input). 
+As a coffee lover // I want to be able to record my favorite brews and their recipes // so that I can recall them later and try them again.
 
-* Use a CSS framework (see suggestions).
+As a coffee lover // I want to be able to easily find a local coffee shop near me // so that I can swing by to get my favorite brew.
 
-* Include at least one modal instead of native browser alert, confirm, or prompt functionality. Look into the CSS framework's documentation for more information!
+## Technologies
 
-* Use client-side storage to store persistent data.
+This project uses:
+Bootstrap v5.3
+HTML5 
+CSS3
+ECMAScript 2024
 
-* Be responsive.
 
-* Have a polished UI.
+## Usage
 
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+To use the website, simply navigate to the page URL (https://zaccahimba.github.io/GoodCoffeeBeans/index.html). Once there, you can find the “Add Coffee” and “Add Recipe” buttons in the navbar. Simply click the button, enter your information, and save to add either a coffee or a recipe to the list of cards. Also in the navbar are tabs to navigate to the “Flavor of the Day” section of the main site, to navigate to the “My Coffees” page where you can see cards that contain your saved coffees, and to navigate to the “My Recipes” page, where you can see cards containing your saved coffee recipes as well as a button to delete them if desired. Lastly, the navbar contains the “Find a Coffee Shop” tab which directs you to a Google Maps search of coffee shops in your area.
 
-### CSS Frameworks
+On the main page, under the navbar, is displayed a coffee suggestion and its corresponding picture to provide motivation to try something new! Refreshing the page changes this suggestion.
 
-One of the requirements for this project is to incorporate a CSS framework into your application.
+Navigating to second page by clicking either “My Coffees” or “My Recipes” in the navbar, you’ll see a list of the coffees or recipes you have added. The cards containing the coffee information have a button to allow you to save a recipe which corresponds to that coffee. It is not linked to that coffee, however, so the recipe can be for any brew you’d like. In the “Recipes” section, cards containing the recipes are displayed along with a number in front of the title you chose. This number is used to delete a recipe. To do this, select the “Delete a Recipe” button under the “Recipes” heading, add the number of the recipe you want to delete, and then confirm that you’d like to delete that recipe.
 
-> **hint** There are different ways to add these frameworks, but for the purposes of this front-end project, you'll need to use the **CDN option**.
+Important to note, the website uses local browser storage, so coffee or recipe information added from different browsers or devices will save to that browser or device alone. 
 
-Look into one of the following CSS frameworks and add it to your project:
+The website is responsive. Try it on your smartphone!
 
-* [Bootstrap](https://getbootstrap.com/)
 
-* [Tailwind CSS](https://tailwindcss.com/)
+## Credits
 
-* [Materialize](https://materializecss.com/)
 
-* [Pure CSS](https://purecss.io/)
+Collaborators:
+Zac Cahimba (https://github.com/zaccahimba)
+John Goldade (https://github.com/Johngoldade)
+Ivelis Becker (https://github.com/I-0110)
 
-* [Semantic UI](https://semantic-ui.com/)
+## License
 
-* [Foundation](https://get.foundation/)
 
-* [Bulma](https://bulma.io/)
+Licensed under the MIT license.
 
-> **note** There are a lot of CSS frameworks out there&mdash;this is just a list to get you started. Feel free to use one not included in this list!
 
-## Presentation Requirements
-
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
-
-* Elevator pitch: a one minute description of your application
-
-* Concept: What is your user story? What was your motivation for development?
-  As a coffee lover // I want to be able to record my favorite brews and their recipes // so that I can recall them later and try them again.
-
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-  * HTML
-  * JavaScript
-  * Bootstrap
-
-* Demo: Show your stuff!
-  * https://zaccahimba.github.io/StudentMiniProject05-01/ 
-
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository
-  * GH Repo Link: https://github.com/zaccahimba/StudentMiniProject05-01
-  * GH Pages Deployed Link: https://zaccahimba.github.io/StudentMiniProject05-01/
-
-
-## Grading Requirements
-
-This project is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 25%
-
-* Satisfies the following code requirements:
-
-  * Application uses client-side storage to store persistent data.
-
-  * Application uses a CSS framework.
-
-  * Application must include at least one modal instead of native browser alert, confirm, or prompt functionality. Look into the CSS framework's documentation for more information!
-
-  * Application is interactive (accepts and responds to user input).
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using a slide deck.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Front-End Project
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
