@@ -2,9 +2,9 @@ const carousel = document.querySelector('#randomFlavorOfTheDay');
 const images = document.querySelector('#coffee'); 
 const coffeeName = document.querySelector('#coffeeName');
 
-const next = carousel.querySelector('.next');
-const prev = carousel.querySelector('.prev');
-let index = 0;
+// const next = carousel.querySelector('.next');
+// const prev = carousel.querySelector('.prev');
+// let index = 0;
 
 const coffeeNames = [
     'Butterscotch Latte',
@@ -83,5 +83,4 @@ function navigate(direction) {
     coffeeName.textContent = coffeeNames[index];
 };
 
-// next.addEventListener('click', () => navigate(1)); 
-// prev.addEventListener('click', () => navigate(-1));
+
